@@ -2,8 +2,6 @@ import React, { FormEvent } from "react";
 import { useAuth } from "context/auth-context";
 
 export const LoginScreen = () => {
-  const apiUrl = process.env.REACT_APP_API_URL;
-
   const { login, user } = useAuth();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
