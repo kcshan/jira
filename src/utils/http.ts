@@ -45,7 +45,7 @@ export const http = async (
 
 export const useHttp = () => {
   const { user } = useAuth();
-  // todo讲解操作符
+  // todo讲解TS Utility Types
   return (...[endpoint, config]: Parameters<typeof http>) =>
     http(endpoint, { ...config, token: user?.token });
 };
